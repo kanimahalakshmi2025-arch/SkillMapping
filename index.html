@@ -1,0 +1,1352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SkillBridge AI | Academia-Industry Collaboration</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+            <div class="brand-icon">S</div>
+
+            <div>
+                <h2>SkillBridge</h2>
+                <span>AI Platform</span>
+            </div>
+        </div>
+
+        <div class="portal-label">
+            STUDENT PORTAL
+        </div>
+
+        <nav>
+
+            <button class="nav-item active"
+                    onclick="showPage('dashboard', this)">
+                <span>▣</span>
+                Dashboard
+            </button>
+
+            <button class="nav-item"
+                    onclick="showPage('assessment', this)">
+                <span>◉</span>
+                Skill Assessment
+            </button>
+
+            <button class="nav-item"
+                    onclick="showPage('skills', this)">
+                <span>◈</span>
+                Skill Gap Analysis
+            </button>
+
+            <button class="nav-item"
+                    onclick="showPage('internships', this)">
+                <span>◆</span>
+                Internships
+            </button>
+
+            <button class="nav-item"
+                    onclick="showPage('applications', this)">
+                <span>✓</span>
+                Applications
+            </button>
+
+            <button class="nav-item"
+                    onclick="showPage('portfolio', this)">
+                <span>▤</span>
+                Digital Portfolio
+            </button>
+
+            <div class="nav-divider"></div>
+
+            <button class="nav-item"
+                    onclick="showPage('institution', this)">
+                <span>▥</span>
+                Institution Analytics
+            </button>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <div class="support-box">
+                <strong>Need Help?</strong>
+                <p>Talk to your career mentor.</p>
+
+                <button onclick="showToast('Mentor support request sent!')">
+                    Contact Mentor
+                </button>
+            </div>
+
+            <div class="sidebar-profile">
+                <div class="avatar small">AK</div>
+
+                <div>
+                    <strong>Arun Kumar</strong>
+                    <span>Student</span>
+                </div>
+
+                <span class="dots">•••</span>
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main">
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <div>
+
+                <h1 id="pageTitle">
+                    Student Dashboard
+                </h1>
+
+                <p id="pageSubtitle">
+                    Monitor your industry readiness and career progress.
+                </p>
+
+            </div>
+
+
+            <div class="top-actions">
+
+                <button class="icon-button"
+                        onclick="showToast('No new notifications')">
+                    🔔
+                    <span class="notification-dot"></span>
+                </button>
+
+                <div class="profile">
+
+                    <div class="avatar">
+                        AK
+                    </div>
+
+                    <div>
+                        <strong>Arun Kumar</strong>
+                        <span>Computer Science</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= DASHBOARD ================= -->
+
+        <section id="dashboard" class="page active-page">
+
+            <div class="welcome-card">
+
+                <div>
+
+                    <div class="welcome-tag">
+                        FINAL YEAR • COMPUTER SCIENCE
+                    </div>
+
+                    <h2>
+                        Welcome back, Arun 👋
+                    </h2>
+
+                    <p>
+                        Your career journey is progressing well.
+                        Continue improving your industry-ready skills.
+                    </p>
+
+                </div>
+
+                <button class="white-button"
+                        onclick="navigateTo('assessment')">
+
+                    Take Skill Assessment →
+
+                </button>
+
+            </div>
+
+
+            <!-- STATS -->
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+
+                    <div class="stat-icon blue">
+                        ◉
+                    </div>
+
+                    <div class="stat-info">
+
+                        <span>Industry Readiness</span>
+
+                        <strong id="dashboardReadiness">
+                            72%
+                        </strong>
+
+                        <small class="positive">
+                            ↑ 8% this month
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon green">
+                        ✓
+                    </div>
+
+                    <div class="stat-info">
+
+                        <span>Verified Skills</span>
+
+                        <strong>6</strong>
+
+                        <small class="positive">
+                            2 recently verified
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon purple">
+                        ◆
+                    </div>
+
+                    <div class="stat-info">
+
+                        <span>Matched Opportunities</span>
+
+                        <strong>12</strong>
+
+                        <small>
+                            AI recommended
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon orange">
+                        ✓
+                    </div>
+
+                    <div class="stat-info">
+
+                        <span>Applications</span>
+
+                        <strong>4</strong>
+
+                        <small class="positive">
+                            1 shortlisted
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- DASHBOARD CONTENT -->
+
+            <div class="two-column">
+
+                <!-- SKILL OVERVIEW -->
+
+                <div class="card">
+
+                    <div class="card-header">
+
+                        <div>
+                            <h3>Skill Overview</h3>
+                            <p>Your current proficiency level</p>
+                        </div>
+
+                        <button class="link-button"
+                                onclick="navigateTo('skills')">
+                            View Analysis
+                        </button>
+
+                    </div>
+
+
+                    <div id="dashboardSkills">
+
+                    </div>
+
+                </div>
+
+
+                <!-- READINESS -->
+
+                <div class="card readiness-widget">
+
+                    <div class="card-header">
+
+                        <div>
+                            <h3>Industry Readiness</h3>
+                            <p>Based on current industry requirements</p>
+                        </div>
+
+                    </div>
+
+                    <div class="readiness-content">
+
+                        <div class="readiness-circle"
+                             id="readinessCircle">
+
+                            <div>
+                                <strong id="readinessNumber">
+                                    72%
+                                </strong>
+
+                                <span>
+                                    Ready
+                                </span>
+                            </div>
+
+                        </div>
+
+                        <div class="readiness-text">
+
+                            <strong>
+                                Good Progress
+                            </strong>
+
+                            <p>
+                                You are on the right track.
+                                Improve SQL and Power BI to increase your readiness.
+                            </p>
+
+                            <button class="primary-button"
+                                    onclick="navigateTo('assessment')">
+
+                                Improve Skills
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- RECOMMENDED OPPORTUNITIES -->
+
+            <div class="card">
+
+                <div class="card-header">
+
+                    <div>
+                        <h3>Recommended Opportunities</h3>
+                        <p>Based on your skill profile</p>
+                    </div>
+
+                    <button class="link-button"
+                            onclick="navigateTo('internships')">
+                        View All
+                    </button>
+
+                </div>
+
+                <div id="dashboardInternships"
+                     class="opportunity-grid">
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ASSESSMENT ================= -->
+
+        <section id="assessment" class="page">
+
+            <div class="page-heading">
+
+                <div>
+                    <span class="eyebrow">
+                        SKILL DEVELOPMENT
+                    </span>
+
+                    <h2>
+                        Technical & Soft Skill Assessment
+                    </h2>
+
+                    <p>
+                        Rate your current proficiency honestly.
+                        The system will identify your skill gaps.
+                    </p>
+                </div>
+
+                <div class="assessment-progress">
+                    <span>Assessment Profile</span>
+                    <strong>100%</strong>
+                </div>
+
+            </div>
+
+
+            <div class="assessment-layout">
+
+                <div class="card assessment-card">
+
+                    <div class="assessment-info">
+
+                        <div class="assessment-icon">
+                            AI
+                        </div>
+
+                        <div>
+                            <h3>
+                                Self Assessment
+                            </h3>
+
+                            <p>
+                                Drag the sliders to indicate your
+                                current proficiency.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div id="assessmentSkills">
+
+                    </div>
+
+
+                    <button class="primary-button large"
+                            onclick="analyseSkills()">
+
+                        Analyse My Skills →
+
+                    </button>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>How it works</h3>
+
+                    <div class="process">
+
+                        <div class="process-item">
+                            <span>1</span>
+                            <div>
+                                <strong>Assess</strong>
+                                <p>Evaluate your current skills.</p>
+                            </div>
+                        </div>
+
+                        <div class="process-item">
+                            <span>2</span>
+                            <div>
+                                <strong>Identify</strong>
+                                <p>Detect industry skill gaps.</p>
+                            </div>
+                        </div>
+
+                        <div class="process-item">
+                            <span>3</span>
+                            <div>
+                                <strong>Improve</strong>
+                                <p>Get personalized recommendations.</p>
+                            </div>
+                        </div>
+
+                        <div class="process-item">
+                            <span>4</span>
+                            <div>
+                                <strong>Connect</strong>
+                                <p>Find matching opportunities.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SKILLS ================= -->
+
+        <section id="skills" class="page">
+
+            <div class="page-heading">
+
+                <div>
+
+                    <span class="eyebrow">
+                        AI ANALYSIS
+                    </span>
+
+                    <h2>
+                        Skill Gap Analysis
+                    </h2>
+
+                    <p>
+                        Compare your current capabilities with
+                        industry expectations.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="readiness-banner">
+
+                <div>
+
+                    <span>
+                        INDUSTRY READINESS SCORE
+                    </span>
+
+                    <strong id="skillReadiness">
+                        72%
+                    </strong>
+
+                    <p>
+                        Target role: Data Analyst
+                    </p>
+
+                </div>
+
+                <div class="banner-message">
+                    <strong>You're making good progress.</strong>
+
+                    <p>
+                        Improve the highlighted skills to reach
+                        the recommended industry level.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="two-column">
+
+                <div class="card">
+
+                    <div class="card-header">
+
+                        <div>
+                            <h3>Current Skill Profile</h3>
+                            <p>Industry benchmark comparison</p>
+                        </div>
+
+                    </div>
+
+                    <div id="skillAnalysis">
+
+                    </div>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-header">
+
+                        <div>
+                            <h3>Priority Skill Gaps</h3>
+                            <p>Skills requiring improvement</p>
+                        </div>
+
+                    </div>
+
+                    <div id="skillGaps">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-header">
+
+                    <div>
+                        <h3>Personalized Learning Path</h3>
+                        <p>Recommended actions based on your gaps</p>
+                    </div>
+
+                </div>
+
+
+                <div class="learning-grid">
+
+                    <div class="learning-card">
+
+                        <div class="learning-number">
+                            01
+                        </div>
+
+                        <div>
+
+                            <span class="learning-tag">
+                                HIGH PRIORITY
+                            </span>
+
+                            <h4>
+                                SQL Intermediate
+                            </h4>
+
+                            <p>
+                                Master joins, subqueries,
+                                aggregation and optimization.
+                            </p>
+
+                            <button onclick="showToast('SQL course opened')">
+                                Start Learning →
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="learning-card">
+
+                        <div class="learning-number">
+                            02
+                        </div>
+
+                        <div>
+
+                            <span class="learning-tag">
+                                HIGH PRIORITY
+                            </span>
+
+                            <h4>
+                                Power BI Fundamentals
+                            </h4>
+
+                            <p>
+                                Learn dashboards, data modelling
+                                and business analytics.
+                            </p>
+
+                            <button onclick="showToast('Power BI course opened')">
+                                Start Learning →
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="learning-card">
+
+                        <div class="learning-number">
+                            03
+                        </div>
+
+                        <div>
+
+                            <span class="learning-tag">
+                                PROJECT
+                            </span>
+
+                            <h4>
+                                Data Analytics Project
+                            </h4>
+
+                            <p>
+                                Build a real-world analytics
+                                portfolio project.
+                            </p>
+
+                            <button onclick="showToast('Project details opened')">
+                                View Project →
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= INTERNSHIPS ================= -->
+
+        <section id="internships" class="page">
+
+            <div class="page-heading">
+
+                <div>
+
+                    <span class="eyebrow">
+                        AI RECOMMENDATIONS
+                    </span>
+
+                    <h2>
+                        Recommended Internships
+                    </h2>
+
+                    <p>
+                        Opportunities ranked according to your
+                        skills and career interests.
+                    </p>
+
+                </div>
+
+                <button class="filter-button">
+                    ⚙ Filters
+                </button>
+
+            </div>
+
+
+            <div class="match-explanation">
+
+                <div class="match-icon">
+                    AI
+                </div>
+
+                <div>
+
+                    <strong>
+                        AI-powered matching
+                    </strong>
+
+                    <p>
+                        Match scores consider skills, eligibility,
+                        career interests and project experience.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div id="internshipList"
+                 class="internship-list">
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= APPLICATIONS ================= -->
+
+        <section id="applications" class="page">
+
+            <div class="page-heading">
+
+                <div>
+
+                    <span class="eyebrow">
+                        APPLICATION TRACKING
+                    </span>
+
+                    <h2>
+                        My Applications
+                    </h2>
+
+                    <p>
+                        Track all your internship and placement applications.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="application-table">
+
+                    <div class="table-head">
+
+                        <span>Company</span>
+                        <span>Position</span>
+                        <span>Applied On</span>
+                        <span>Status</span>
+
+                    </div>
+
+
+                    <div class="table-row">
+
+                        <span class="company-name">
+                            ABC Technologies
+                        </span>
+
+                        <span>
+                            Data Analyst Intern
+                        </span>
+
+                        <span>
+                            24 Aug 2026
+                        </span>
+
+                        <span>
+                            <b class="status shortlisted">
+                                Shortlisted
+                            </b>
+                        </span>
+
+                    </div>
+
+
+                    <div class="table-row">
+
+                        <span class="company-name">
+                            TechNova Solutions
+                        </span>
+
+                        <span>
+                            Business Analyst Intern
+                        </span>
+
+                        <span>
+                            22 Aug 2026
+                        </span>
+
+                        <span>
+                            <b class="status review">
+                                Under Review
+                            </b>
+                        </span>
+
+                    </div>
+
+
+                    <div class="table-row">
+
+                        <span class="company-name">
+                            DataSphere Labs
+                        </span>
+
+                        <span>
+                            ML Intern
+                        </span>
+
+                        <span>
+                            18 Aug 2026
+                        </span>
+
+                        <span>
+                            <b class="status applied">
+                                Applied
+                            </b>
+                        </span>
+
+                    </div>
+
+
+                    <div class="table-row">
+
+                        <span class="company-name">
+                            InnovateX
+                        </span>
+
+                        <span>
+                            Software Developer Intern
+                        </span>
+
+                        <span>
+                            15 Aug 2026
+                        </span>
+
+                        <span>
+                            <b class="status rejected">
+                                Not Selected
+                            </b>
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PORTFOLIO ================= -->
+
+        <section id="portfolio" class="page">
+
+            <div class="page-heading">
+
+                <div>
+
+                    <span class="eyebrow">
+                        DIGITAL IDENTITY
+                    </span>
+
+                    <h2>
+                        Digital Skill Portfolio
+                    </h2>
+
+                    <p>
+                        Your verified academic and professional profile.
+                    </p>
+
+                </div>
+
+                <button class="primary-button"
+                        onclick="showToast('Portfolio download started')">
+                    ↓ Download Portfolio
+                </button>
+
+            </div>
+
+
+            <div class="portfolio-header card">
+
+                <div class="portfolio-profile">
+
+                    <div class="portfolio-avatar">
+                        AK
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Arun Kumar
+                        </h2>
+
+                        <p>
+                            B.Tech Computer Science Engineering
+                        </p>
+
+                        <span>
+                            Final Year • CGPA 8.6
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="verified-badge">
+                    ✓ Verified Profile
+                </div>
+
+            </div>
+
+
+            <div class="portfolio-grid">
+
+                <div class="card">
+
+                    <h3>Verified Skills</h3>
+
+                    <div class="tag-container">
+
+                        <span class="skill-tag verified">
+                            ✓ Python
+                        </span>
+
+                        <span class="skill-tag verified">
+                            ✓ SQL
+                        </span>
+
+                        <span class="skill-tag verified">
+                            ✓ Excel
+                        </span>
+
+                        <span class="skill-tag verified">
+                            ✓ Statistics
+                        </span>
+
+                        <span class="skill-tag">
+                            Power BI
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>Certifications</h3>
+
+                    <div class="portfolio-item">
+
+                        <div class="certificate-icon">
+                            C
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Python for Data Science
+                            </strong>
+
+                            <p>
+                                Industry Certification
+                            </p>
+
+                        </div>
+
+                        <span class="verified-small">
+                            ✓
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>Projects</h3>
+
+                    <div class="portfolio-item">
+
+                        <div class="project-icon">
+                            P
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Student Analytics System
+                            </strong>
+
+                            <p>
+                                Python • SQL • Power BI
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="portfolio-item">
+
+                        <div class="project-icon">
+                            P
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Sales Prediction Model
+                            </strong>
+
+                            <p>
+                                Python • Machine Learning
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>Internship Experience</h3>
+
+                    <div class="portfolio-item">
+
+                        <div class="company-logo">
+                            A
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                ABC Technologies
+                            </strong>
+
+                            <p>
+                                Data Analytics Intern
+                            </p>
+
+                            <small>
+                                3 Months
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= INSTITUTION ================= -->
+
+        <section id="institution" class="page">
+
+            <div class="page-heading">
+
+                <div>
+
+                    <span class="eyebrow">
+                        INSTITUTION ANALYTICS
+                    </span>
+
+                    <h2>
+                        Employability Dashboard
+                    </h2>
+
+                    <p>
+                        Monitor student skill development,
+                        internships and placement readiness.
+                    </p>
+
+                </div>
+
+                <select class="year-select">
+
+                    <option>2026 - 27</option>
+                    <option>2025 - 26</option>
+
+                </select>
+
+            </div>
+
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+
+                    <div class="stat-icon blue">
+                        S
+                    </div>
+
+                    <div class="stat-info">
+
+                        <span>Total Students</span>
+
+                        <strong>2,450</strong>
+
+                        <small>
+                            Final year students
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon green">
+                        ✓
+                    </div>
+
+                    <div class="stat-info">
+
+                        <span>Industry Ready</span>
+
+                        <strong>38%</strong>
+
+                        <small class="positive">
+                            ↑ 6% improvement
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon purple">
+                        I
+                    </div>
+
+                    <div class="stat-info">
+
+                        <span>Internship Rate</span>
+
+                        <strong>61%</strong>
+
+                        <small>
+                            1,495 students
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon orange">
+                        P
+                    </div>
+
+                    <div class="stat-info">
+
+                        <span>Placement Rate</span>
+
+                        <strong>74%</strong>
+
+                        <small class="positive">
+                            ↑ 9% this year
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="two-column">
+
+                <div class="card">
+
+                    <div class="card-header">
+
+                        <div>
+                            <h3>Top Skill Gaps</h3>
+                            <p>Skills requiring institutional attention</p>
+                        </div>
+
+                    </div>
+
+                    <div class="institution-skills">
+
+                        <div class="institution-skill">
+                            <div>
+                                <span>Cloud Computing</span>
+                                <strong>68%</strong>
+                            </div>
+
+                            <div class="progress">
+                                <div style="width:68%"></div>
+                            </div>
+                        </div>
+
+
+                        <div class="institution-skill">
+                            <div>
+                                <span>Data Analytics</span>
+                                <strong>54%</strong>
+                            </div>
+
+                            <div class="progress">
+                                <div style="width:54%"></div>
+                            </div>
+                        </div>
+
+
+                        <div class="institution-skill">
+                            <div>
+                                <span>Cyber Security</span>
+                                <strong>41%</strong>
+                            </div>
+
+                            <div class="progress">
+                                <div style="width:41%"></div>
+                            </div>
+                        </div>
+
+
+                        <div class="institution-skill">
+                            <div>
+                                <span>Communication</span>
+                                <strong>37%</strong>
+                            </div>
+
+                            <div class="progress">
+                                <div style="width:37%"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="card insight-card">
+
+                    <span class="eyebrow">
+                        AI INSIGHT
+                    </span>
+
+                    <h3>
+                        68% of students need Cloud Computing training.
+                    </h3>
+
+                    <p>
+                        Based on current industry requirements,
+                        a structured Cloud Computing workshop
+                        could significantly improve placement readiness.
+                    </p>
+
+                    <button class="primary-button"
+                            onclick="showToast('Training program creation opened')">
+                        Create Training Program
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<!-- TOAST -->
+
+<div id="toast" class="toast">
+    Action completed successfully.
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
